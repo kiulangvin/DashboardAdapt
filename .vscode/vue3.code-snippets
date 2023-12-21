@@ -1,0 +1,22 @@
+{
+	"vue3 file template": {
+		"prefix": "vue3",
+		"body": [
+		"<script setup>",
+		"// import { defineOptions, ref, reactive, toRefs, onMounted} from 'vue'",
+		"defineOptions({",
+		"   name:\"L-${TM_FILENAME_BASE}\"",
+		"})",
+		"",
+		"</script>",
+		"",
+		"<template>",
+		"  <div class=\"${TM_FILENAME_BASE}-container\"></div>",
+		"</template>",
+		"",
+		"<style scoped lang=\"less\">",
+		"</style>",
+	  ],
+		"description": "vue3 template"
+	  }
+}
