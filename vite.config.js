@@ -14,7 +14,8 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       less: {
-        math:"always"
+        math:"always",
+        additionalData: `@import "@/assets/utils.less";`
       }
     }
   },  
