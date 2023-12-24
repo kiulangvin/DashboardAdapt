@@ -1,6 +1,6 @@
 <script setup>
 
-import { isValid, debounce } from "../utils/common"
+import { isValid, debounce, px2vw, px2vh } from "../utils/common"
 
 import { defineOptions, defineProps, ref, reactive, onMounted, nextTick, onUnmounted } from 'vue'
 
@@ -158,13 +158,13 @@ const initScreenSize = () => {
 const updateScreenSize = () => {
     if (data.width && data.height) {
         if (isValid(el.value)) {
-            el.value.style.width = `${data.width}px`
-            el.value.style.height = `${data.height}px`
+            el.value.style.width = `${px2vw(data.width)}vw`
+            el.value.style.height = `${px2vh(data.height)}vh`
         }
     } else {
         if (isValid(el.value)) {
-            el.value.style.width = `${data.originalWidth}px`
-            el.value.style.height = `${data.originalHeight}px`
+            el.value.style.width = `${px2vw(data.originalWidth)}vw`
+            el.value.style.height = `${px2vh(data.originalHeight)}vh`
         }
     }
 }
