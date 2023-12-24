@@ -21,7 +21,7 @@ const clone_boxStyle = computed(() => {
     } if (props.boxStyle.height) {
         clone_boxStyle.height = `${px2vh(props.boxStyle.height)}vh`
     }
-    return { ...props.boxStyle, clone_boxStyle }
+    return { ...props.boxStyle, ...clone_boxStyle }
 })
 
 const styles = {
