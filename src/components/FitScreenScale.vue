@@ -3,10 +3,12 @@
 import { isValid, debounce } from "../utils/common"
 
 import { defineOptions, ref, reactive, onMounted, nextTick, onUnmounted } from 'vue'
+
 defineOptions({
     name: "L-FitScreenScale"
 })
 
+// 传值
 const props = defineProps({
     // 宽度
     width: {
@@ -54,6 +56,7 @@ const props = defineProps({
     }
 })
 
+// 响应式值
 const data = reactive({
     width: 0,
     height: 0,
@@ -62,13 +65,14 @@ const data = reactive({
     observer: null | MutationObserver
 })
 
+// 跟template的 ref 同名绑定
 const el = ref(null);
 
 const styles = {
     box: {
         overflow: 'hidden',
         backgroundSize: `100% 100%`,
-        backgroundColor: `#000`,
+        backgroundColor: `#fff`,
         width: `100vw`,
         height: `100vh`
     },
@@ -111,7 +115,7 @@ onMounted(() => {
     nextTick(async () => {
         await initScreenSize();
         updateScreenSize();
-        updateScale();
+        updateScreenScale();
         //监听窗口变化，动态设置大屏容器宽高
         window.addEventListener('resize', resizeHandler)
         initMutationObserver();
@@ -165,9 +169,9 @@ const updateScreenSize = () => {
     }
 }
 /**
- * 更新scale
+ * 更新屏幕的scale
  */
-const updateScale = () => {
+const updateScreenScale = () => {
     // 获取真实视口尺寸
     const currentWidth = document.body.clientWidth
     const currentHeight = document.body.clientHeight
@@ -187,12 +191,12 @@ const updateScale = () => {
     }
     // 按照宽高最小比例进行缩放
     const scale = Math.min(widthScale, heightScale)
-    setScale(scale);
+    setScreenScale(scale);
 }
 /**
- * 设置缩放
+ * 设置屏幕的scale
  */
-const setScale = (scale) => {
+const setScreenScale = (scale) => {
     if (!props.autoScale) return
     if (isValid(el.value)) {
         const domWidth = el.value.clientWidth
@@ -218,7 +222,7 @@ const setScale = (scale) => {
 const resizeHandler = debounce(async () => {
     await initScreenSize();
     updateScreenSize();
-    updateScale();
+    updateScreenScale();
 }, props.debounceTime, false)
 
 
