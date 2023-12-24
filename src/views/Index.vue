@@ -14,7 +14,7 @@ defineOptions({
 })
 const data = reactive({
     leftBoxStyle: {
-        width: 600,
+        width: 450,
         "background-color": "#000"
     }
 })

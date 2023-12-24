@@ -20,6 +20,7 @@ defineOptions({
     position: relative;
     width: 100%;
     height: 100%;
-    border: 1px solid red;
+    background-color: darkgray;
+    padding: 10px;
 }
 </style>

@@ -44,7 +44,9 @@ const styles = {
 <style scoped lang="less">
 .LeftContainer-container {
     position: relative;
-    border: 1px solid red;
+    // border: 1px solid red;
+    background-color: aquamarine;
+    padding: 10px;
 
 }
 </style>

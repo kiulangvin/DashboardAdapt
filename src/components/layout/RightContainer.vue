@@ -18,6 +18,7 @@ defineOptions({
     position: relative;
     .px2vw(width, 450);
     height: 100%;
-    border: 1px solid red;
+    background-color: bisque;
+    padding: 10px;
 }
 </style>
