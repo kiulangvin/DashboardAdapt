@@ -2,7 +2,7 @@
 
 import { isValid, debounce } from "../utils/common"
 
-import { defineOptions, ref, reactive, onMounted, nextTick, onUnmounted } from 'vue'
+import { defineOptions, defineProps, ref, reactive, onMounted, nextTick, onUnmounted } from 'vue'
 
 defineOptions({
     name: "L-FitScreenScale"

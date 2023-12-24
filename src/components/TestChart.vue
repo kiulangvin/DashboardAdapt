@@ -18,8 +18,8 @@ const initChart = () => {
         },
         backgroundColor: "transparent",
         grid: {
-            left: proxy.$fitChartSize(100),
-            right: proxy.$fitChartSize(200),
+            left: proxy.$fitChartSize(10),
+            right: proxy.$fitChartSize(20),
             top: proxy.$fitChartSize(20),
             bottom: proxy.$fitChartSize(10),
             containLabel: true,
@@ -59,8 +59,8 @@ const initChart = () => {
 
 <style scoped lang="less">
 .testChart-container {
-    width: 1000px;
-    height: 600px;
+    width: 300px;
+    height: 300px;
 
     .chart {
         width: 100%;

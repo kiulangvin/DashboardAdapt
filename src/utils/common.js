@@ -24,3 +24,12 @@ export function debounce(func, wait, immediate) {
         }
     }
 }
+
+// px 转为 vw 的函数(不带单位)
+export function px2vw(px, designWidth = 2160) {
+    return (px / designWidth) * 100;
+}
+// px 转为 vh 的函数 (不带单位) 
+export function px2vh(px, designHeight = 1440) {
+    return (px / designHeight) * 100;
+}
