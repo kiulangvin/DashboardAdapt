@@ -26,10 +26,10 @@ export function debounce(func, wait, immediate) {
 }
 
 // px 转为 vw 的函数(不带单位)
-export function px2vw(px, designWidth = 2160) {
+export function px2vw(px, designWidth = 1920) {
     return (px / designWidth) * 100;
 }
 // px 转为 vh 的函数 (不带单位) 
-export function px2vh(px, designHeight = 1440) {
+export function px2vh(px, designHeight = 1080) {
     return (px / designHeight) * 100;
 }

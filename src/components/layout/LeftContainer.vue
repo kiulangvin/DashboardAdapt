@@ -27,7 +27,7 @@ const clone_boxStyle = computed(() => {
 const styles = {
     box: {
         width: `${px2vw(450)}vw`,
-        height: `100vh`
+        height: `100%`
     },
 }
 

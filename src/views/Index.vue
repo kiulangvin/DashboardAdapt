@@ -52,5 +52,7 @@ const data = reactive({
 <style scoped lang="less">
 .content {
     display: flex;
+    height: calc(100% - 100px);
+    position: relative;
 }
 </style>
