@@ -3,11 +3,24 @@
 defineOptions({
     name: "L-RightContainer"
 })
+// 传值
+const props = defineProps({
+    boxStyle: {
+        type: Object,
+        default: () => ({})
+    },
+})
 
+const styles = {
+    box: {
+        width: `450px`,
+        height: `100%`
+    },
+}
 </script>
 
 <template>
-    <div class="RightContainer-container">
+    <div class="RightContainer-container" :style="{ ...styles.box, ...props.boxStyle }">
         <!-- 右侧内容 -->
         <slot name="right"></slot>
     </div>

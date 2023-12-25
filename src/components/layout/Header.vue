@@ -4,10 +4,25 @@ defineOptions({
     name: "L-Header"
 })
 
+// 传值
+const props = defineProps({
+    boxStyle: {
+        type: Object,
+        default: () => ({})
+    },
+})
+
+const styles = {
+    box: {
+        width: `100%`,
+        height: `100px`
+    },
+}
+
 </script>
 
 <template>
-    <div class="Header-container">
+    <div class="Header-container" :style="{ ...styles.box, ...props.boxStyle }">
         <!-- 头部组件 -->
         <slot name="header"></slot>
     </div>
@@ -17,6 +32,5 @@ defineOptions({
 .Header-container {
     background-color: darkslategray;
     position: relative;
-    .px2vh(height, 100);
 }
 </style>
